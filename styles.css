@@ -1,0 +1,782 @@
+/* SUP3RCUTE SCENECORE STYLES */
+
+/* Import early 2000s fonts */
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Nosifer&family=Permanent+Marker&family=Chiller&family=Bloody&family=Eater&display=swap');
+
+/* Early 2000s Web Fonts */
+@font-face {
+    font-family: 'SceneKid';
+    src: url('data:font/woff2;base64,') format('woff2');
+    /* Add your scene fonts here */
+}
+
+@font-face {
+    font-family: 'MySpace';
+    src: url('data:font/woff2;base64,') format('woff2');
+    /* Classic MySpace font */
+}
+
+/* CSS Variables for Scene Colors */
+:root {
+    --scene-pink: #FF1493;
+    --scene-purple: #8A2BE2;
+    --scene-black: #000000;
+    --scene-white: #FFFFFF;
+    --scene-gray: #1a1a1a;
+    --scene-cyan: #00FFFF;
+    --scene-green: #39FF14;
+    --scene-shadow: 0 0 20px rgba(255, 20, 147, 0.5);
+    --scene-glow: 0 0 15px rgba(138, 43, 226, 0.8);
+}
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', monospace;
+    background: #000000 url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><rect width="10" height="10" fill="%23FF1493" opacity="0.1"/><rect x="10" y="10" width="10" height="10" fill="%23FF1493" opacity="0.1"/></svg>') repeat;
+    color: var(--scene-white);
+    overflow-x: auto;
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><text y="16" font-size="16">💕</text></svg>'), auto;
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+}
+
+/* Early 2000s Background Pattern */
+.bg-pattern {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        #000000 
+        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="50" height="50" fill="%23FF1493" opacity="0.05"/><rect x="50" y="50" width="50" height="50" fill="%238A2BE2" opacity="0.05"/><circle cx="25" cy="25" r="10" fill="%2300FFFF" opacity="0.1"/><circle cx="75" cy="75" r="10" fill="%23FF1493" opacity="0.1"/></svg>') repeat;
+    z-index: -2;
+    animation: none;
+}
+
+/* Animated gradient background */
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes patternFloat {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(5deg); }
+}
+
+/* Floating Elements */
+.floating-elements {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.floating-heart,
+.floating-skull,
+.floating-star,
+.floating-sparkle {
+    position: absolute;
+    font-size: 2rem;
+    animation: float 6s ease-in-out infinite;
+}
+
+.floating-heart {
+    color: var(--scene-pink);
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.floating-skull {
+    color: var(--scene-white);
+    top: 60%;
+    right: 15%;
+    animation-delay: 2s;
+}
+
+.floating-star {
+    color: var(--scene-cyan);
+    top: 80%;
+    left: 20%;
+    animation-delay: 4s;
+}
+
+.floating-sparkle {
+    color: var(--scene-purple);
+    top: 40%;
+    right: 25%;
+    animation-delay: 1s;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    25% { transform: translateY(-10px) rotate(90deg); }
+    50% { transform: translateY(-20px) rotate(180deg); }
+    75% { transform: translateY(-10px) rotate(270deg); }
+}
+
+/* Early 2000s Navigation */
+.navbar {
+    background: #000000 !important;
+    border: 3px ridge var(--scene-pink);
+    border-radius: 0;
+    box-shadow: inset 2px 2px 4px rgba(255, 20, 147, 0.3), inset -2px -2px 4px rgba(138, 43, 226, 0.3);
+    font-family: 'Courier New', monospace;
+    text-transform: uppercase;
+    padding: 5px 0;
+}
+
+.navbar-brand {
+    font-family: 'Creepster', cursive;
+    font-size: 2rem !important;
+    text-shadow: 2px 2px 0px #000, 4px 4px 0px var(--scene-purple), 6px 6px 0px var(--scene-pink);
+    text-transform: lowercase;
+    letter-spacing: 2px;
+}
+
+.brand-text {
+    color: var(--scene-pink) !important;
+    text-decoration: none;
+}
+
+.brand-hearts {
+    color: var(--scene-purple);
+    animation: heartBeat 2s ease-in-out infinite;
+}
+
+@keyframes heartBeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+.nav-link {
+    color: var(--scene-pink) !important;
+    font-weight: bold;
+    text-transform: lowercase;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    text-decoration: none;
+    border: 2px outset var(--scene-purple);
+    background: #1a1a1a;
+    padding: 5px 10px !important;
+    margin: 0 5px;
+    transition: all 0.1s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--scene-cyan) !important;
+    border: 2px inset var(--scene-pink);
+    background: #333;
+    text-shadow: 1px 1px 0px #000;
+}
+
+/* Early 2000s Music Player */
+.music-player {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #000000;
+    border: 3px ridge var(--scene-pink);
+    border-radius: 0;
+    padding: 10px;
+    z-index: 1000;
+    box-shadow: inset 2px 2px 4px rgba(255, 20, 147, 0.3), inset -2px -2px 4px rgba(138, 43, 226, 0.3);
+    max-width: 250px;
+    font-family: 'Courier New', monospace;
+    font-size: 11px;
+}
+
+.player-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.player-info {
+    color: var(--scene-pink);
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.player-controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn-player {
+    background: #1a1a1a;
+    border: 2px outset var(--scene-purple);
+    color: var(--scene-pink);
+    padding: 4px 8px;
+    border-radius: 0;
+    cursor: pointer;
+    transition: all 0.1s ease;
+    font-size: 12px;
+    font-family: 'Courier New', monospace;
+}
+
+.btn-player:hover {
+    background: #333;
+    border: 2px inset var(--scene-purple);
+    color: var(--scene-cyan);
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: #333;
+    border: 1px inset var(--scene-purple);
+    border-radius: 0;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: var(--scene-pink);
+    width: 0%;
+    transition: width 0.1s ease;
+    border-right: 2px solid var(--scene-purple);
+}
+
+/* Early 2000s Main Content */
+.main-content {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+    font-family: 'Courier New', monospace;
+}
+
+/* Welcome Section */
+.welcome-section {
+    margin-bottom: 30px;
+}
+
+/* Visitor Counter */
+.visitor-counter {
+    margin: 20px 0;
+    padding: 10px;
+    background: #1a1a1a;
+    border: 2px inset var(--scene-purple);
+}
+
+/* Early 2000s Table Styles */
+table {
+    font-family: 'Courier New', monospace;
+}
+
+/* Blink Effect */
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+
+blink {
+    animation: blink 1s infinite;
+}
+
+/* Page Headers */
+.page-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.page-title {
+    font-family: 'Creepster', cursive;
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.glitch-text {
+    color: var(--scene-pink);
+    text-shadow: 
+        2px 2px 0 var(--scene-purple),
+        -2px -2px 0 var(--scene-cyan);
+    animation: glitch 2s infinite;
+}
+
+@keyframes glitch {
+    0% { transform: translate(0); }
+    20% { transform: translate(-2px, 2px); }
+    40% { transform: translate(-2px, -2px); }
+    60% { transform: translate(2px, 2px); }
+    80% { transform: translate(2px, -2px); }
+    100% { transform: translate(0); }
+}
+
+.subtitle {
+    display: block;
+    font-size: 1.2rem;
+    color: var(--scene-purple);
+    font-family: 'Permanent Marker', cursive;
+}
+
+/* Remove hero section - replaced with table layout */
+.hero-section,
+.hero-content,
+.hero-title,
+.hero-description,
+.hero-buttons,
+.hero-image {
+    display: none;
+}
+
+/* Early 2000s Buttons */
+.btn-scene {
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    padding: 6px 12px;
+    border: 2px outset;
+    border-radius: 0;
+    text-transform: lowercase;
+    transition: all 0.1s ease;
+    position: relative;
+    overflow: hidden;
+    font-weight: bold;
+}
+
+.btn-scene.btn-primary {
+    background: #1a1a1a;
+    border-color: var(--scene-pink);
+    color: var(--scene-pink);
+}
+
+.btn-scene.btn-primary:hover {
+    background: #333;
+    border: 2px inset var(--scene-pink);
+    color: var(--scene-cyan);
+}
+
+.btn-scene.btn-secondary {
+    background: #1a1a1a;
+    border-color: var(--scene-purple);
+    color: var(--scene-purple);
+}
+
+.btn-scene.btn-secondary:hover {
+    background: #333;
+    border: 2px inset var(--scene-purple);
+    color: var(--scene-cyan);
+}
+
+/* Early 2000s Section Titles */
+.section-title {
+    font-family: 'Creepster', cursive;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--scene-pink);
+    text-shadow: 2px 2px 0px #000, 4px 4px 0px var(--scene-purple);
+    text-transform: lowercase;
+    letter-spacing: 3px;
+}
+
+/* Early 2000s Product Cards */
+.product-card {
+    background: #000000;
+    border: 3px ridge var(--scene-purple);
+    border-radius: 0;
+    padding: 10px;
+    transition: all 0.1s ease;
+    height: 100%;
+    box-shadow: inset 2px 2px 4px rgba(138, 43, 226, 0.3), inset -2px -2px 4px rgba(255, 20, 147, 0.3);
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+}
+
+.product-card:hover {
+    border: 3px ridge var(--scene-pink);
+    background: #1a1a1a;
+}
+
+.product-image {
+    width: 100%;
+    height: 200px;
+    border-radius: 0;
+    overflow: hidden;
+    margin-bottom: 10px;
+    border: 2px inset var(--scene-pink);
+}
+
+.product-info {
+    text-align: center;
+}
+
+.product-info h3 {
+    font-family: 'Courier New', monospace;
+    color: var(--scene-pink);
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.product-info .price {
+    font-size: 13px;
+    color: var(--scene-purple);
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-family: 'Courier New', monospace;
+}
+
+/* Early 2000s Placeholder Images */
+.placeholder-image {
+    width: 100%;
+    height: 100%;
+    background: #333 url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><rect width="10" height="10" fill="%23FF1493" opacity="0.2"/><rect x="10" y="10" width="10" height="10" fill="%23FF1493" opacity="0.2"/></svg>') repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--scene-pink);
+    font-size: 12px;
+    text-align: center;
+    border-radius: 0;
+    font-family: 'Courier New', monospace;
+    border: 1px dashed var(--scene-purple);
+}
+
+.placeholder-image i {
+    font-size: 2rem;
+    margin-bottom: 8px;
+    color: var(--scene-purple);
+    animation: blink 2s infinite;
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0.3; }
+}
+
+/* Early 2000s Filter Buttons */
+.filter-section {
+    margin-bottom: 30px;
+    text-align: center;
+    background: #1a1a1a;
+    border: 2px inset var(--scene-purple);
+    padding: 10px;
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn-filter {
+    background: #000;
+    border: 2px outset var(--scene-purple);
+    color: var(--scene-purple);
+    padding: 4px 12px;
+    border-radius: 0;
+    font-family: 'Courier New', monospace;
+    cursor: pointer;
+    transition: all 0.1s ease;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 2px;
+}
+
+.btn-filter:hover,
+.btn-filter.active {
+    background: #333;
+    border: 2px inset var(--scene-purple);
+    color: var(--scene-pink);
+}
+
+/* About Page Styles */
+.about-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-card {
+    background: rgba(0, 0, 0, 0.8);
+    border: 2px solid var(--scene-pink);
+    border-radius: 15px;
+    padding: 30px;
+    backdrop-filter: blur(10px);
+    height: 100%;
+}
+
+.about-card h2 {
+    font-family: 'Creepster', cursive;
+    color: var(--scene-pink);
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.about-card p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: var(--scene-white);
+}
+
+.about-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+}
+
+/* Values Section */
+.values-section {
+    margin: 60px 0;
+}
+
+.value-card {
+    background: rgba(0, 0, 0, 0.8);
+    border: 2px solid var(--scene-purple);
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+    height: 100%;
+    backdrop-filter: blur(10px);
+}
+
+.value-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--scene-glow);
+    border-color: var(--scene-pink);
+}
+
+.value-icon {
+    font-size: 3rem;
+    color: var(--scene-pink);
+    margin-bottom: 20px;
+}
+
+.value-card h3 {
+    font-family: 'Permanent Marker', cursive;
+    color: var(--scene-purple);
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.value-card p {
+    color: var(--scene-white);
+    line-height: 1.5;
+}
+
+/* Contact Section */
+.contact-section {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.8);
+    border: 2px solid var(--scene-pink);
+    border-radius: 15px;
+    padding: 40px;
+    backdrop-filter: blur(10px);
+}
+
+.contact-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: var(--scene-white);
+}
+
+.contact-methods {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.contact-method {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--scene-purple);
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.contact-method:hover {
+    color: var(--scene-pink);
+    transform: translateY(-2px);
+}
+
+/* Early 2000s Newsletter */
+.newsletter-section {
+    margin: 30px 0;
+}
+
+.newsletter-form {
+    display: inline;
+}
+
+.newsletter-form input {
+    background: #000;
+    border: 2px inset var(--scene-purple);
+    border-radius: 0;
+    padding: 4px;
+    color: var(--scene-pink);
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+}
+
+.newsletter-form input::placeholder {
+    color: rgba(255, 20, 147, 0.6);
+}
+
+.newsletter-form input:focus {
+    outline: none;
+    border: 2px inset var(--scene-pink);
+    background: #1a1a1a;
+}
+
+/* Early 2000s Footer */
+.footer {
+    background: #000000;
+    border-top: 3px ridge var(--scene-pink);
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+.footer font {
+    font-family: 'Courier New', monospace;
+}
+
+.footer a:hover {
+    color: var(--scene-purple) !important;
+    text-decoration: underline;
+}
+
+/* Mouse Trail */
+.mouse-trail {
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    font-size: 1.5rem;
+    color: var(--scene-pink);
+    animation: fadeOut 1s ease-out forwards;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hero-content {
+        padding-right: 0;
+        margin-bottom: 40px;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .music-player {
+        position: relative;
+        bottom: auto;
+        right: auto;
+        margin: 20px auto;
+        max-width: 100%;
+    }
+    
+    .contact-methods {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .newsletter-form {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .newsletter-form input {
+        min-width: 100%;
+        max-width: 300px;
+    }
+    
+    .floating-heart,
+    .floating-skull,
+    .floating-star,
+    .floating-sparkle {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .page-title {
+        font-size: 2rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .brand-text {
+        font-size: 1.5rem !important;
+    }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--scene-black);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--scene-pink);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--scene-purple);
+}
+
+/* Selection highlight */
+::selection {
+    background: var(--scene-pink);
+    color: white;
+}
+
+::-moz-selection {
+    background: var(--scene-pink);
+    color: white;
+}

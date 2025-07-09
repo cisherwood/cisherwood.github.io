@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ab0ut - sup3rcute</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Nosifer&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Background pattern placeholder -->
+    <div class="bg-pattern">
+        <!-- Replace with your background pattern/texture -->
+    </div>
+
+    <!-- Floating animated elements -->
+    <div class="floating-elements">
+        <div class="floating-heart"><i class="fas fa-heart"></i></div>
+        <div class="floating-skull"><i class="fas fa-skull"></i></div>
+        <div class="floating-star"><i class="fas fa-star"></i></div>
+        <div class="floating-sparkle">✨</div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand scene-brand" href="index.html">
+                <span class="brand-text">sup3rcute</span>
+                <span class="brand-hearts">💕</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">h0m3</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="store.html">st0r3</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="about.html">ab0ut</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Music Player -->
+    <div class="music-player">
+        <div class="player-content">
+            <div class="player-info">
+                <span class="track-name">n0w playing: [add your track here]</span>
+            </div>
+            <div class="player-controls">
+                <button class="btn-player" id="prevBtn"><i class="fas fa-backward"></i></button>
+                <button class="btn-player" id="playBtn"><i class="fas fa-play"></i></button>
+                <button class="btn-player" id="nextBtn"><i class="fas fa-forward"></i></button>
+                <button class="btn-player" id="volumeBtn"><i class="fas fa-volume-up"></i></button>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+            </div>
+            <audio id="audioPlayer" loop>
+                <!-- Add your audio files here -->
+                <source src="audio/track1.mp3" type="audio/mpeg">
+                <source src="audio/track2.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container main-content">
+        <!-- Page Header -->
+        <div class="page-header">
+            <h1 class="page-title">
+                <span class="glitch-text">ab0ut sup3rcute</span>
+                <span class="subtitle">our story</span>
+            </h1>
+        </div>
+
+        <!-- About Sections -->
+        <div class="about-content">
+            <div class="row mb-5">
+                <div class="col-lg-6">
+                    <div class="about-card">
+                        <h2><i class="fas fa-heart"></i> our mission</h2>
+                        <p>
+                            sup3rcute is where cute meets core - we're bringing back the scene/emo aesthetic 
+                            with a modern twist. our streetwear captures that perfect balance of kawaii cuteness 
+                            and darker undertones that defined early 2000s internet culture.
+                        </p>
+                        <p>
+                            we're not just a clothing brand - we're a cultural bridge between the scene kids 
+                            who defined internet culture and the digital natives reshaping it today.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-image">
+                        <!-- Replace with your about image -->
+                        <div class="placeholder-image">
+                            <i class="fas fa-users"></i>
+                            <span>about image placeholder</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-5">
+                <div class="col-lg-6 order-lg-2">
+                    <div class="about-card">
+                        <h2><i class="fas fa-star"></i> the aesthetic</h2>
+                        <p>
+                            we draw inspiration from myspace era scene culture, mixing it with cutecore 
+                            and egirl aesthetics. think bright pinks and purples against black backgrounds, 
+                            skulls with hearts, and that perfect blend of sweet and edgy.
+                        </p>
+                        <p>
+                            our designs reference classic scene elements - from band tees to studded accessories - 
+                            while adding modern touches that speak to today's alternative fashion lovers.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <div class="about-image">
+                        <!-- Replace with your aesthetic image -->
+                        <div class="placeholder-image">
+                            <i class="fas fa-palette"></i>
+                            <span>aesthetic image placeholder</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-5">
+                <div class="col-lg-6">
+                    <div class="about-card">
+                        <h2><i class="fas fa-tshirt"></i> our products</h2>
+                        <p>
+                            every piece is designed with scene authenticity in mind. from oversized band-style 
+                            tees to cropped hoodies with thumb holes, we're creating the streetwear that scene 
+                            kids would have worn if they had the budget.
+                        </p>
+                        <p>
+                            we focus on quality construction and authentic details - because scene fashion 
+                            was never just about the look, it was about the culture and community.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-image">
+                        <!-- Replace with your products image -->
+                        <div class="placeholder-image">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span>products image placeholder</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Values Section -->
+            <div class="values-section">
+                <h2 class="section-title">
+                    <i class="fas fa-heart"></i> our values <i class="fas fa-heart"></i>
+                </h2>
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="value-card">
+                            <div class="value-icon">
+                                <i class="fas fa-skull"></i>
+                            </div>
+                            <h3>authenticity</h3>
+                            <p>we're made by scene kids, for scene kids. every design comes from genuine love for the culture.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="value-card">
+                            <div class="value-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <h3>quality</h3>
+                            <p>premium materials and construction - because your favorite pieces should last.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="value-card">
+                            <div class="value-icon">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h3>community</h3>
+                            <p>building a space where alternative fashion lovers can express themselves freely.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Section -->
+            <div class="contact-section">
+                <h2 class="section-title">
+                    <i class="fas fa-envelope"></i> get in touch <i class="fas fa-envelope"></i>
+                </h2>
+                <div class="contact-content">
+                    <p>have questions? want to collab? just want to say hi?</p>
+                    <div class="contact-methods">
+                        <a href="mailto:hello@sup3rcute.com" class="contact-method">
+                            <i class="fas fa-envelope"></i>
+                            hello@sup3rcute.com
+                        </a>
+                        <a href="#" class="contact-method">
+                            <i class="fab fa-instagram"></i>
+                            @sup3rcute
+                        </a>
+                        <a href="#" class="contact-method">
+                            <i class="fab fa-tiktok"></i>
+                            @sup3rcute
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; 2024 sup3rcute. all rights reserved.</p>
+                </div>
+                <div class="col-md-6">
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
