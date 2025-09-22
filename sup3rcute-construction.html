@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>sup3rcute</title>
+    <style>
+        body {
+            background-color: #000000;
+            background-image: 
+                repeating-linear-gradient(
+                    45deg,
+                    transparent,
+                    transparent 10px,
+                    #1a001a 10px,
+                    #1a001a 20px
+                );
+            font-family: "Comic Sans MS", cursive;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .container {
+            text-align: center;
+            padding: 40px;
+            background: rgba(0, 0, 0, 0.9);
+            border: 3px ridge #FF00FF;
+        }
+        
+        .title {
+            font-family: "Impact", "Arial Black", sans-serif;
+            font-size: 72px;
+            letter-spacing: -3px;
+            margin: 20px 0;
+        }
+        
+        .sup {
+            color: #FF69B4;
+            text-shadow: 3px 3px 0px #9D4EDD;
+        }
+        
+        .three {
+            color: #9D4EDD;
+            text-shadow: 3px 3px 0px #FF69B4;
+        }
+        
+        .cute {
+            color: #FF69B4;
+            text-shadow: 3px 3px 0px #9D4EDD;
+        }
+        
+        .coming-soon {
+            color: #00FF00;
+            font-size: 24px;
+            margin: 30px 0;
+        }
+        
+        .weasel-spot {
+            width: 300px;
+            height: 300px;
+            margin: 30px auto;
+            border: 2px dashed #00FF00;
+            background: #1a001a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #808080;
+        }
+        
+        blink {
+            animation: blink 1s step-start infinite;
+        }
+        
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            <span class="sup">sup</span><span class="three">3</span><span class="cute">rcute</span>
+        </div>
+        
+        <div class="coming-soon">
+            <blink>coming soon - be patient you little weasel</blink>
+        </div>
+        
+        <div class="weasel-spot">
+             <img src="weasel.png" alt="weasel"width="300" height="300"> 
+        </div>
+    </div>
+</body>
+</html>
